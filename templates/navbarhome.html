@@ -1,0 +1,113 @@
+{% load static %}
+
+<!-- =====================================
+TOP HEADER
+===================================== -->
+
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-inner">
+      <div class="contact-info">
+        <a href="tel:0111050130">
+          <i class="bi bi-telephone-fill"></i>
+          0111 050130
+        </a>
+
+        <a href="mailto:info@kerichotalanta.org">
+          <i class="bi bi-envelope-fill"></i>
+          info@kerichotalanta.org
+        </a>
+      </div>
+
+      <div class="social-links">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =====================================
+MAIN NAVBAR
+===================================== -->
+
+<nav class="navbar navbar-expand-lg athletics-navbar">
+  <div class="container">
+    <!-- LOGO -->
+
+    <a class="navbar-brand" href="{% url 'dashboard' %}">
+      <img
+        src="{% static 'images/logo.png' %}"
+        alt="Kericho Talanta"
+        class="site-logo"
+      />
+
+      <div class="logo-text">
+        <span class="logo-title"> KERICHO TALANTA </span>
+
+        <span class="logo-subtitle"> ATHLETICS • TALENT • EXCELLENCE </span>
+      </div>
+    </a>
+
+    <!-- MOBILE BUTTON -->
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarMenu"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- MENU -->
+
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#"> Events </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Upcoming Events</a></li>
+            <li><a class="dropdown-item" href="#">Past Events</a></li>
+            <li><a class="dropdown-item" href="#">Race Calendar</a></li>
+            <li><a class="dropdown-item" href="#">Results</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#"> Athletes </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Elite Athletes</a></li>
+            <li><a class="dropdown-item" href="#">Junior Athletes</a></li>
+            <li><a class="dropdown-item" href="#">Profiles</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Rankings</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Gallery</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">News</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+
+      <a href="#" class="member-btn"> Become a Member </a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,408 @@
+{% extends "main.html" %} {% load static %} {% block title %}Kericho Talanta
+Athletics{% endblock %} {% block content %}
+
+<style>
+  :root {
+    --primary-green: #2e7d32;
+    --gold: #c8a24a;
+    --brown: #6d4c41;
+    --light: #f8f7f2;
+  }
+
+  /* =========================
+   GLOBAL
+========================= */
+
+  body {
+    font-family: "Poppins", sans-serif;
+    background: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+  }
+
+  section {
+    padding: 90px 20px;
+  }
+
+  .container-home {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 700;
+  }
+
+  h2 {
+    color: var(--primary-green);
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: #555;
+  }
+
+  /* =========================
+   HERO
+========================= */
+
+  .hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+      url("{% static 'images/hero.jpg' %}");
+
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+
+  .hero-content {
+    max-width: 850px;
+  }
+
+  .hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    color: #f5f5f5;
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
+
+  .hero-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: #fff;
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .hero-btn:hover {
+    background: #b28d36;
+    color: #fff;
+  }
+
+  /* =========================
+   FEATURES
+========================= */
+
+  .features {
+    background: #fafafa;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .feature-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .feature-card i {
+    font-size: 50px;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+  }
+
+  .feature-card h3 {
+    margin-bottom: 15px;
+  }
+
+  /* =========================
+   ABOUT
+========================= */
+
+  .about {
+    background: #fff;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .about img {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  /* =========================
+   EVENTS
+========================= */
+
+  .events {
+    background: #f7f7f7;
+  }
+
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .event-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .event-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .event-card-content {
+    padding: 25px;
+  }
+
+  /* =========================
+   STATS
+========================= */
+
+  .stats {
+    background: var(--primary-green);
+    color: #fff;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  .stat-title {
+    color: #f0f0f0;
+  }
+
+  /* =========================
+   CTA
+========================= */
+
+  .cta {
+    background: var(--brown);
+    text-align: center;
+    color: #fff;
+  }
+
+  .cta h2 {
+    color: #fff;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 35px;
+    background: var(--gold);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+  }
+
+  /* =========================
+   MOBILE
+========================= */
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 38px;
+    }
+
+    .hero p {
+      font-size: 17px;
+    }
+
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+
+    section {
+      padding: 70px 15px;
+    }
+  }
+</style>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Kericho Talanta Athletics</h1>
+    <p>
+      Developing Champions. Empowering Youth. Building the Future of Athletics
+      in Kericho County.
+    </p>
+
+    <a href="{% url 'register' %}" class="hero-btn"> Join Us Today </a>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="container-home">
+    <h2 class="text-center">Why Kericho Talanta?</h2>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <i class="bi bi-trophy"></i>
+        <h3>Talent Development</h3>
+        <p>
+          Identify and nurture young athletes through structured training
+          programs.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <i class="bi bi-calendar-event"></i>
+        <h3>Events & Competitions</h3>
+        <p>Participate in local, regional and national athletics events.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="bi bi-bar-chart-line"></i>
+        <h3>Performance Tracking</h3>
+        <p>Monitor athlete rankings, records and achievements.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="bi bi-people"></i>
+        <h3>Community Growth</h3>
+        <p>Connect athletes, coaches, clubs and supporters.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="container-home">
+    <div class="about-grid">
+      <div>
+        <img src="{% static 'images/about-athletics.jpg' %}" alt="" />
+      </div>
+
+      <div>
+        <h2>About Kericho Talanta</h2>
+
+        <p>
+          Kericho Talanta Athletics is dedicated to identifying, training and
+          supporting talented athletes across Kericho County.
+        </p>
+
+        <p>
+          Through coaching, competitions and mentorship programs, we help
+          athletes reach their full potential both locally and internationally.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="events">
+  <div class="container-home">
+    <h2 class="text-center">Upcoming Events</h2>
+
+    <div class="events-grid">
+      <div class="event-card">
+        <img src="{% static 'images/event1.jpg' %}" />
+        <div class="event-card-content">
+          <h3>County Championship</h3>
+          <p>Annual athletics championship for emerging athletes.</p>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="{% static 'images/event2.jpg' %}" />
+        <div class="event-card-content">
+          <h3>Cross Country Challenge</h3>
+          <p>Competitive cross-country races across Kericho County.</p>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="{% static 'images/event3.jpg' %}" />
+        <div class="event-card-content">
+          <h3>Talent Identification Camp</h3>
+          <p>Scouting and mentoring future champions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container-home">
+    <div class="stats-grid">
+      <div>
+        <div class="stat-number">500+</div>
+        <div class="stat-title">Athletes</div>
+      </div>
+
+      <div>
+        <div class="stat-number">50+</div>
+        <div class="stat-title">Coaches</div>
+      </div>
+
+      <div>
+        <div class="stat-number">20+</div>
+        <div class="stat-title">Events</div>
+      </div>
+
+      <div>
+        <div class="stat-number">15+</div>
+        <div class="stat-title">Training Camps</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container-home">
+    <h2>Ready To Become The Next Champion?</h2>
+
+    <p>Register today and begin your athletics journey with Kericho Talanta.</p>
+
+    <a href="{% url 'register' %}" class="cta-btn"> Register Now </a>
+  </div>
+</section>
+
+{% endblock %}
