@@ -22,6 +22,8 @@ ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     "Tour",
+    'website',
+    
     "widget_tweaks",
     "crispy_forms",
     "crispy_bootstrap5",

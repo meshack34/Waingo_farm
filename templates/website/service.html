@@ -1,0 +1,402 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Site -->
+    <title>AgroPro - Services</title>
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="AgroPro agricultural services" />
+    <meta name="author" content="" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="{% static 'images/fevicon.png' %}"
+      type="image/gif"
+    />
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    />
+
+    <!-- Datepicker -->
+    <link
+      rel="stylesheet"
+      href="{% static 'css/bootstrap-datepicker.min.css' %}"
+    />
+  </head>
+
+  <body class="main-layout inner_page service_page">
+    <!-- HEADER -->
+    <div class="full_bg">
+      <header class="header-area">
+        <div class="container-fluid">
+          <div class="row d_flex">
+            <!-- LOGO -->
+            <div class="col-md-2 col-sm-3">
+              <div class="logo">
+                <a href="{% url 'home' %}"> Agro<span>Pro</span> </a>
+              </div>
+            </div>
+
+            <!-- NAVIGATION -->
+            <div class="col-md-8 col-sm-9">
+              <div class="navbar-area">
+                <nav class="site-navbar">
+                  <ul>
+                    <li>
+                      <a href="{% url 'home' %}"> Home </a>
+                    </li>
+
+                    <li>
+                      <a href="{% url 'about' %}"> About </a>
+                    </li>
+
+                    <li>
+                      <a class="active" href="{% url 'service' %}"> Service </a>
+                    </li>
+
+                    <li>
+                      <a href="#"> Projects </a>
+                    </li>
+
+                    <li>
+                      <a href="{% url 'testimonial' %}"> Testimonial </a>
+                    </li>
+
+                    <li>
+                      <a href="{% url 'blog' %}"> Blog </a>
+                    </li>
+
+                    <li>
+                      <a href="{% url 'contact' %}"> Contact </a>
+                    </li>
+                  </ul>
+
+                  <button class="nav-toggler">
+                    <span></span>
+                  </button>
+                </nav>
+              </div>
+            </div>
+
+            <!-- LOGIN / SEARCH -->
+            <div class="col-md-2 padd_0 d_none">
+              <ul class="email text_align_right">
+                <li>
+                  <a href="#"> Login </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <i class="fa fa-search" aria-hidden="true"> </i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- END HEADER -->
+
+    <!-- SERVICES -->
+    <div class="services">
+      <div class="container">
+        <!-- TITLE -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="titlepage text_align_left">
+              <span> What We Do </span>
+
+              <h2>SERVICES WE OFFER</h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- SERVICES LIST -->
+        <div class="row">
+          <!-- SERVICE 1 -->
+          <div class="col-md-4">
+            <div class="services_box_main">
+              <div class="services_box text_align_left">
+                <figure>
+                  <img
+                    src="{% static 'images/service1.jpg' %}"
+                    alt="Fresh Vegetables"
+                  />
+                </figure>
+
+                <div class="veget">
+                  <h3>
+                    FRESH<br />
+                    VEGETABLES
+                  </h3>
+
+                  <p>
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip.
+                  </p>
+                </div>
+              </div>
+
+              <a class="read_more" href="{% url 'service' %}"> Read More </a>
+            </div>
+          </div>
+
+          <!-- SERVICE 2 -->
+          <div class="col-md-4">
+            <div class="services_box_main">
+              <div class="services_box text_align_left">
+                <figure>
+                  <img
+                    src="{% static 'images/service2.jpg' %}"
+                    alt="Agriculture Products"
+                  />
+                </figure>
+
+                <div class="veget">
+                  <h3>
+                    AGRICULTURE<br />
+                    PRODUCTS
+                  </h3>
+
+                  <p>
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip.
+                  </p>
+                </div>
+              </div>
+
+              <a class="read_more" href="{% url 'service' %}"> Read More </a>
+            </div>
+          </div>
+
+          <!-- SERVICE 3 -->
+          <div class="col-md-4">
+            <div class="services_box_main">
+              <div class="services_box text_align_left">
+                <figure>
+                  <img
+                    src="{% static 'images/service3.jpg' %}"
+                    alt="Organic Products"
+                  />
+                </figure>
+
+                <div class="veget">
+                  <h3>
+                    ORGANIC<br />
+                    PRODUCTS
+                  </h3>
+
+                  <p>
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip.
+                  </p>
+                </div>
+              </div>
+
+              <a class="read_more" href="{% url 'service' %}"> Read More </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END SERVICES -->
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <!-- NEWSLETTER -->
+            <div class="col-lg-3 col-md-6">
+              <div class="hedingh3 text_align_left">
+                <h3>Newsletter</h3>
+
+                <form
+                  id="colof"
+                  class="form_subscri"
+                  method="POST"
+                  action="{% url 'contact' %}"
+                >
+                  {% csrf_token %}
+
+                  <input
+                    class="newsl"
+                    placeholder="Enter Email"
+                    type="email"
+                    name="email"
+                    required
+                  />
+
+                  <button type="submit" class="subsci_btn">
+                    <img src="{% static 'images/new.png' %}" alt="Subscribe" />
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <!-- EXPLORE -->
+            <div class="col-lg-3 col-md-6">
+              <div class="hedingh3 text_align_left">
+                <h3>Explore</h3>
+
+                <ul class="menu_footer">
+                  <li>
+                    <a href="{% url 'home' %}"> Home </a>
+                  </li>
+
+                  <li>
+                    <a href="{% url 'about' %}"> About </a>
+                  </li>
+
+                  <li>
+                    <a href="{% url 'service' %}"> Service </a>
+                  </li>
+
+                  <li>
+                    <a href="#"> Projects </a>
+                  </li>
+
+                  <li>
+                    <a href="{% url 'testimonial' %}"> Testimonial </a>
+                  </li>
+
+                  <li>
+                    <a href="{% url 'contact' %}"> Contact Us </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- RECENT POSTS -->
+            <div class="col-lg-3 col-md-6">
+              <div class="hedingh3 text_align_left">
+                <h3>Recent Posts</h3>
+
+                <ul class="recent">
+                  <li>
+                    <img
+                      src="{% static 'images/resent.jpg' %}"
+                      alt="Recent Post"
+                    />
+
+                    Agriculture news and updates
+                  </li>
+
+                  <li>
+                    <img
+                      src="{% static 'images/resent.jpg' %}"
+                      alt="Recent Post"
+                    />
+
+                    Latest farming information
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="col-lg-3 col-md-6">
+              <div class="hedingh3 flot_right text_align_left">
+                <h3>Contact</h3>
+
+                <ul class="top_infomation">
+                  <li>
+                    <i class="fa fa-phone" aria-hidden="true"> </i>
+
+                    +01 1234567892
+                  </li>
+
+                  <li>
+                    <i class="fa fa-envelope" aria-hidden="true"> </i>
+
+                    <a href="mailto:demo@gmail.com"> demo@gmail.com </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="copyright">
+          <div class="container">
+            <div class="row d_flex">
+              <div class="col-md-8">
+                <p>
+                  © 2022 All Rights Reserved. Design by
+
+                  <a href="https://html.design/"> Free html Templates </a>
+                </p>
+              </div>
+
+              <!-- SOCIAL -->
+              <div class="col-md-4">
+                <ul class="social_icon">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-facebook" aria-hidden="true"> </i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-twitter" aria-hidden="true"> </i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-linkedin" aria-hidden="true"> </i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER -->
+
+    <!-- JAVASCRIPT -->
+
+    <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+    <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+
+    <script src="{% static 'js/custom.js' %}"></script>
+  </body>
+</html>
