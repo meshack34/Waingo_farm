@@ -67,8 +67,9 @@
                   <img
                     src="{% static 'images/logo.jpg' %}"
                     alt="Waiguro Logo"
-                    width="150"
-                    height="60"
+                    width="70"
+                    height="30"
+                    class="site-logo"
                   />
                 </a>
               </div>
@@ -134,107 +135,63 @@
       </header>
 
       <!-- END HEADER -->
+<!-- BANNER / VIDEO HERO -->
+<div class="video-hero">
 
-      <!-- BANNER / SLIDER -->
-      <div class="slider_main">
-        <div
-          id="banner1"
-          class="carousel slide carousel-fade"
-          data-ride="carousel"
-          data-interval="6000"
-        >
-          <!-- INDICATORS -->
-          <ol class="carousel-indicators">
-            <li data-target="#banner1" data-slide-to="0" class="active"></li>
+  <!-- BACKGROUND VIDEO -->
+  <video
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+  >
+    <source src="{% static 'videos/WAINGO FARM.mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-            <li data-target="#banner1" data-slide-to="1"></li>
+  <!-- DARK OVERLAY -->
+  <div class="hero-overlay"></div>
 
-            <li data-target="#banner1" data-slide-to="2"></li>
-          </ol>
+  <!-- CONTENT ON TOP OF VIDEO -->
+  <div class="hero-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-8 col-sm-10">
 
-          <!-- SLIDES -->
-          <div class="carousel-inner">
-            <!-- SLIDE 1 -->
-            <div class="carousel-item active">
-              <picture>
-                <source srcset="{% static 'images/banner.jpg' %}" />
+          <div class="hero-text">
+            <span>Welcome to Our Farm</span>
 
-                <img
-                  src="{% static 'images/banner.jpg' %}"
-                  alt="Agriculture"
-                  class="d-block img-fluid"
-                />
-              </picture>
+            <h1>
+              Growing a Better
+              <strong>Future</strong>
+            </h1>
 
-              <div class="carousel-caption relative"></div>
-            </div>
+            <p>
+              We are committed to sustainable agriculture,
+              quality produce, and a healthier future for our community.
+            </p>
 
-            <!-- SLIDE 2 -->
-            <div class="carousel-item">
-              <picture>
-                <img
-                  src="{% static 'images/banner.jpg' %}"
-                  alt="Agriculture"
-                  class="d-block img-fluid"
-                />
-              </picture>
+            <div class="hero-buttons">
+              <a href="#about" class="hero-btn">
+                Discover More
+              </a>
 
-              <div class="carousel-caption relative"></div>
-            </div>
-
-            <!-- SLIDE 3 -->
-            <div class="carousel-item">
-              <picture>
-                <source srcset="{% static 'images/banner.jpg' %}" />
-
-                <img
-                  src="{% static 'images/banner.jpg' %}"
-                  alt="Agriculture"
-                  class="d-block img-fluid"
-                />
-              </picture>
-
-              <div class="carousel-caption relative"></div>
+              <a href="#contact" class="hero-btn hero-btn-outline">
+                Contact Us
+              </a>
             </div>
           </div>
 
-          <!-- PREVIOUS -->
-          <a
-            class="carousel-control-prev"
-            href="#banner1"
-            role="button"
-            data-slide="prev"
-          >
-            <i class="fa fa-angle-left" aria-hidden="true"> </i>
-
-            <span class="sr-only"> Previous </span>
-          </a>
-
-          <!-- NEXT -->
-          <a
-            class="carousel-control-next"
-            href="#banner1"
-            role="button"
-            data-slide="next"
-          >
-            <i class="fa fa-angle-right" aria-hidden="true"> </i>
-
-            <span class="sr-only"> Next </span>
-          </a>
-        </div>
-
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="willom">
-                <h1>Agriculture Farm</h1>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
-    <!-- END BANNER -->
+  </div>
+
+</div>
+<!-- END VIDEO HERO -->
+
 
     <!-- ABOUT -->
     <div class="about">
